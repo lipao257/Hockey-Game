@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: jogo-futebol-2d
+    env: php
+    buildCommand: ""
+    startCommand: php -S 0.0.0.0:$PORT -t .
+    envVars:
+      - key: PHP_VERSION
+        value: 8.1
+    healthCheckPath: /index.html
+
+

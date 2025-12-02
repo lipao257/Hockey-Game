@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Futebol 2D Estiloso ⚽</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div id="ui">
+    <div>
+        <label for="mode">Modo:</label>
+        <select id="mode">
+            <option value="single">Single</option>
+            <option value="multi">Multiplayer</option>
+        </select>
+    </div>
+
+    <div>
+        <label for="team">Time:</label>
+        <select id="team">
+            <option value="red">Vermelho</option>
+            <option value="blue">Azul</option>
+        </select>
+    </div>
+
+    <button id="reset">Resetar</button>
+    <span id="score">0 – 0</span>
+    <button id="logout" class="logout-btn">Sair</button>
+</div>
+
+<canvas id="game"></canvas>
+
+<script src="js/game.js"></script>
+</body>
+</html>
+
+

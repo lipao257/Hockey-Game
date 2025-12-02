@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Login - Futebol 2D ⚽</title>
+    <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-box">
+            <div class="logo">
+                <div class="ball-icon">⚽</div>
+                <h1>Futebol 2D</h1>
+                <p>Entre para começar a jogar</p>
+            </div>
+
+            <form id="loginForm" class="login-form">
+                <div class="form-group">
+                    <label for="username">Nome de Usuário</label>
+                    <input 
+                        type="text" 
+                        id="username" 
+                        name="username" 
+                        placeholder="Digite seu nome"
+                        required
+                        autocomplete="username"
+                    >
+                    <span class="error-message" id="usernameError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">E-mail</label>
+                    <input 
+                        type="email" 
+                        id="email" 
+                        name="email" 
+                        placeholder="seu@email.com"
+                        required
+                        autocomplete="email"
+                    >
+                    <span class="error-message" id="emailError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="team">Escolha seu Time</label>
+                    <select id="team" name="team" required>
+                        <option value="">Selecione um time</option>
+                        <option value="red">🔴 Vermelho</option>
+                        <option value="blue">🔵 Azul</option>
+                    </select>
+                    <span class="error-message" id="teamError"></span>
+                </div>
+
+                <button type="submit" class="login-button">
+                    <span class="button-text">Entrar no Jogo</span>
+                    <span class="button-loader" id="loader"></span>
+                </button>
+            </form>
+
+            <div class="login-footer">
+                <p>Não precisa criar conta, apenas preencha os dados acima!</p>
+            </div>
+        </div>
+
+        <div class="background-animation">
+            <div class="ball ball-1"></div>
+            <div class="ball ball-2"></div>
+            <div class="ball ball-3"></div>
+        </div>
+    </div>
+
+    <script src="js/login.js"></script>
+</body>
+</html>
+
+

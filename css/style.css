@@ -1,0 +1,217 @@
+* {
+  box-sizing: border-box;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #181818;
+  color: #eee;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  overflow-x: hidden;
+}
+
+#ui {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin-bottom: 10px;
+  padding: 10px 15px;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+#ui > * {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+#ui label {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+#ui select,
+#ui button {
+  padding: 8px 12px;
+  font-size: 14px;
+  background: #333;
+  color: #eee;
+  border: 1px solid #555;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+#ui select:hover,
+#ui button:hover {
+  background: #444;
+  border-color: #666;
+}
+
+#ui button:active {
+  transform: scale(0.98);
+}
+
+#score {
+  font-size: 18px;
+  font-weight: bold;
+  padding: 8px 15px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  min-width: 80px;
+  text-align: center;
+}
+
+.logout-btn {
+  padding: 8px 15px;
+  font-size: 14px;
+  background: #e74c3c;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-weight: 600;
+}
+
+.logout-btn:hover {
+  background: #c0392b;
+  transform: translateY(-1px);
+}
+
+.logout-btn:active {
+  transform: translateY(0);
+}
+
+#game {
+  background: #3a7d44;
+  border: 4px solid #555;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Responsividade para tablets */
+@media (max-width: 768px) {
+  body, html {
+    padding: 10px;
+  }
+
+  #ui {
+    padding: 8px 12px;
+    gap: 8px;
+  }
+
+  #ui select,
+  #ui button {
+    padding: 6px 10px;
+    font-size: 13px;
+  }
+
+  #score {
+    font-size: 16px;
+    padding: 6px 12px;
+  }
+
+  #game {
+    border-width: 3px;
+  }
+}
+
+/* Responsividade para celulares */
+@media (max-width: 480px) {
+  body, html {
+    padding: 5px;
+    justify-content: flex-start;
+    padding-top: 10px;
+  }
+
+  #ui {
+    padding: 6px 10px;
+    gap: 6px;
+    flex-direction: column;
+    width: calc(100% - 10px);
+  }
+
+  #ui > * {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  #ui select,
+  #ui button {
+    padding: 8px;
+    font-size: 12px;
+    flex: 1;
+  }
+
+  #score {
+    font-size: 16px;
+    width: 100%;
+    margin-top: 5px;
+  }
+
+  #game {
+    border-width: 2px;
+    border-radius: 8px;
+    margin-top: 5px;
+  }
+}
+
+/* Orientação landscape em celulares */
+@media (max-width: 768px) and (orientation: landscape) {
+  body, html {
+    padding: 5px;
+  }
+
+  #ui {
+    padding: 6px 10px;
+    margin-bottom: 5px;
+  }
+
+  #ui > * {
+    width: auto;
+  }
+}
+
+/* Melhorias para telas muito pequenas */
+@media (max-width: 320px) {
+  #ui {
+    padding: 5px 8px;
+  }
+
+  #ui select,
+  #ui button {
+    padding: 6px;
+    font-size: 11px;
+  }
+
+  #score {
+    font-size: 14px;
+  }
+}
+
+/* Suporte para modo retrato em tablets */
+@media (min-width: 481px) and (max-width: 768px) and (orientation: portrait) {
+  #ui {
+    max-width: 100%;
+  }
+}
+

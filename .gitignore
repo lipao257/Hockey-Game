@@ -1,0 +1,53 @@
+# Arquivos e pastas a ignorar no Git
+
+# Logs
+*.log
+logs/
+error_log
+
+# Arquivos de sistema
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Arquivos temporários
+*.tmp
+*.temp
+*.bak
+*.backup
+
+# Arquivos de ambiente (se criar no futuro)
+.env
+.env.local
+.env.production
+
+# Arquivos de cache
+cache/
+tmp/
+*.cache
+
+# Arquivos de sessão PHP
+sessions/
+
+# Arquivos de upload (se houver)
+uploads/
+
+# Arquivos de configuração local (opcional)
+config/database.local.php
+
+# Node modules (se adicionar no futuro)
+node_modules/
+package-lock.json
+
+# Build files
+dist/
+build/
+
+
