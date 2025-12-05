@@ -202,8 +202,6 @@ document.addEventListener('DOMContentLoaded', () => {
       };
       localStorage.setItem('userData', JSON.stringify(offlineUserData));
       localStorage.setItem('isLoggedIn', 'true');
-      
-      alert('Erro de conexão. Usando modo offline. Algumas funcionalidades podem estar limitadas.');
       window.location.href = 'game.html';
     }
   });
